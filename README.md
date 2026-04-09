@@ -2,7 +2,7 @@
 
 plugin.zipをダウンロードして、kintoneに読み込ませてお使いください。
 
-設定方法は[こちら](https://lp.pons-llc.com/post/kintone-sustainable-app)で紹介しています。
+設定方法は[こちら](https://lp.pons-llc.com/blog/post/kintone-sustainable-app.html)で紹介しています。
 
 気になる方はソースコードもおいておきます。
 
