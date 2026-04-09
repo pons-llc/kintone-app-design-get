@@ -1,0 +1,926 @@
+{
+  "app/form/layout.json": {
+    "layout": [
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "DROP_DOWN",
+            "code": "ドロップダウン_0",
+            "size": {
+              "width": "196"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "HR",
+            "elementId": "",
+            "size": {
+              "width": "680"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "LABEL",
+            "label": "<div>相談情報</div>",
+            "elementId": "",
+            "size": {
+              "width": "88"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "RECORD_NUMBER",
+            "code": "レコード番号",
+            "size": {
+              "width": "120"
+            }
+          },
+          {
+            "type": "DROP_DOWN",
+            "code": "ドロップダウン",
+            "size": {
+              "width": "196"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "DATETIME",
+            "code": "日時",
+            "size": {
+              "width": "196"
+            }
+          },
+          {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "文字列__1行__0",
+            "size": {
+              "width": "193"
+            }
+          },
+          {
+            "type": "SINGLE_LINE_TEXT",
+            "code": "文字列__1行_",
+            "size": {
+              "width": "404"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "RADIO_BUTTON",
+            "code": "ラジオボタン",
+            "size": {
+              "width": "622"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "RADIO_BUTTON",
+            "code": "ラジオボタン_0",
+            "size": {
+              "width": "662"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "NUMBER",
+            "code": "数値",
+            "size": {
+              "width": "193"
+            }
+          },
+          {
+            "type": "RADIO_BUTTON",
+            "code": "ラジオボタン_1",
+            "size": {
+              "width": "371"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "NUMBER",
+            "code": "数値_0",
+            "size": {
+              "width": "193"
+            }
+          },
+          {
+            "type": "RADIO_BUTTON",
+            "code": "ラジオボタン_2",
+            "size": {
+              "width": "253"
+            }
+          }
+        ]
+      },
+      {
+        "type": "ROW",
+        "fields": [
+          {
+            "type": "SPACER",
+            "elementId": "ponsmap",
+            "size": {
+              "width": "720",
+              "height": "237"
+            }
+          }
+        ]
+      },
+      {
+        "type": "GROUP",
+        "code": "グループ",
+        "layout": [
+          {
+            "type": "ROW",
+            "fields": [
+              {
+                "type": "SINGLE_LINE_TEXT",
+                "code": "ido",
+                "size": {
+                  "width": "404"
+                }
+              }
+            ]
+          },
+          {
+            "type": "ROW",
+            "fields": [
+              {
+                "type": "SINGLE_LINE_TEXT",
+                "code": "keido",
+                "size": {
+                  "width": "316"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "revision": "65"
+  },
+  "app/form/fields.json": {
+    "revision": "65",
+    "properties": {
+      "レコード番号": {
+        "type": "RECORD_NUMBER",
+        "code": "レコード番号",
+        "label": "レコード番号",
+        "noLabel": false
+      },
+      "作業者": {
+        "type": "STATUS_ASSIGNEE",
+        "code": "作業者",
+        "label": "作業者",
+        "enabled": true
+      },
+      "ラジオボタン_2": {
+        "type": "RADIO_BUTTON",
+        "code": "ラジオボタン_2",
+        "label": "大規模建築物等",
+        "noLabel": false,
+        "required": true,
+        "options": {
+          "該当": {
+            "label": "該当",
+            "index": "0"
+          },
+          "非該当": {
+            "label": "非該当",
+            "index": "1"
+          }
+        },
+        "defaultValue": "該当",
+        "align": "HORIZONTAL"
+      },
+      "更新者": {
+        "type": "MODIFIER",
+        "code": "更新者",
+        "label": "更新者",
+        "noLabel": false
+      },
+      "作成者": {
+        "type": "CREATOR",
+        "code": "作成者",
+        "label": "作成者",
+        "noLabel": false
+      },
+      "文字列__1行_": {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "文字列__1行_",
+        "label": "相談所在地",
+        "noLabel": false,
+        "required": false,
+        "minLength": "",
+        "maxLength": "",
+        "expression": "",
+        "hideExpression": false,
+        "unique": false,
+        "defaultValue": ""
+      },
+      "ステータス": {
+        "type": "STATUS",
+        "code": "ステータス",
+        "label": "ステータス",
+        "enabled": true
+      },
+      "keido": {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "keido",
+        "label": "経度",
+        "noLabel": false,
+        "required": false,
+        "minLength": "",
+        "maxLength": "",
+        "expression": "",
+        "hideExpression": false,
+        "unique": false,
+        "defaultValue": ""
+      },
+      "ラジオボタン": {
+        "type": "RADIO_BUTTON",
+        "code": "ラジオボタン",
+        "label": "現況",
+        "noLabel": false,
+        "required": true,
+        "options": {
+          "更地": {
+            "label": "更地",
+            "index": "4"
+          },
+          "戸建て": {
+            "label": "戸建て",
+            "index": "0"
+          },
+          "駐車場": {
+            "label": "駐車場",
+            "index": "3"
+          },
+          "共同住宅": {
+            "label": "共同住宅",
+            "index": "1"
+          },
+          "事業所": {
+            "label": "事業所",
+            "index": "2"
+          },
+          "その他": {
+            "label": "その他",
+            "index": "5"
+          }
+        },
+        "defaultValue": "戸建て",
+        "align": "HORIZONTAL"
+      },
+      "グループ": {
+        "type": "GROUP",
+        "code": "グループ",
+        "label": "グループ",
+        "noLabel": true,
+        "openGroup": true
+      },
+      "ラジオボタン_0": {
+        "type": "RADIO_BUTTON",
+        "code": "ラジオボタン_0",
+        "label": "現況",
+        "noLabel": false,
+        "required": true,
+        "options": {
+          "戸建て（個人用）": {
+            "label": "戸建て（個人用）",
+            "index": "0"
+          },
+          "戸建て（分譲）": {
+            "label": "戸建て（分譲）",
+            "index": "1"
+          },
+          "共同住宅": {
+            "label": "共同住宅",
+            "index": "2"
+          },
+          "事業所": {
+            "label": "事業所",
+            "index": "3"
+          },
+          "その他": {
+            "label": "その他",
+            "index": "4"
+          }
+        },
+        "defaultValue": "戸建て（個人用）",
+        "align": "HORIZONTAL"
+      },
+      "ドロップダウン": {
+        "type": "DROP_DOWN",
+        "code": "ドロップダウン",
+        "label": "ドロップダウン",
+        "noLabel": false,
+        "required": false,
+        "options": {
+          "sample1": {
+            "label": "sample1",
+            "index": "0"
+          },
+          "sample2": {
+            "label": "sample2",
+            "index": "1"
+          }
+        },
+        "defaultValue": ""
+      },
+      "ラジオボタン_1": {
+        "type": "RADIO_BUTTON",
+        "code": "ラジオボタン_1",
+        "label": "構造",
+        "noLabel": false,
+        "required": true,
+        "options": {
+          "RC": {
+            "label": "RC",
+            "index": "2"
+          },
+          "木造": {
+            "label": "木造",
+            "index": "0"
+          },
+          "鉄骨": {
+            "label": "鉄骨",
+            "index": "1"
+          },
+          "その他": {
+            "label": "その他",
+            "index": "3"
+          }
+        },
+        "defaultValue": "木造",
+        "align": "HORIZONTAL"
+      },
+      "数値_0": {
+        "type": "NUMBER",
+        "code": "数値_0",
+        "label": "階層",
+        "noLabel": false,
+        "required": false,
+        "minValue": "",
+        "maxValue": "",
+        "digit": false,
+        "unique": false,
+        "defaultValue": "",
+        "displayScale": "",
+        "unit": "階建",
+        "unitPosition": "AFTER"
+      },
+      "文字列__1行__0": {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "文字列__1行__0",
+        "label": "相談者",
+        "noLabel": false,
+        "required": false,
+        "minLength": "",
+        "maxLength": "",
+        "expression": "",
+        "hideExpression": false,
+        "unique": false,
+        "defaultValue": ""
+      },
+      "更新日時": {
+        "type": "UPDATED_TIME",
+        "code": "更新日時",
+        "label": "更新日時",
+        "noLabel": false
+      },
+      "カテゴリー": {
+        "type": "CATEGORY",
+        "code": "カテゴリー",
+        "label": "カテゴリー",
+        "enabled": false
+      },
+      "日時": {
+        "type": "DATETIME",
+        "code": "日時",
+        "label": "相談日時",
+        "noLabel": false,
+        "required": false,
+        "unique": false,
+        "defaultValue": "",
+        "defaultNowValue": true
+      },
+      "ドロップダウン_0": {
+        "type": "DROP_DOWN",
+        "code": "ドロップダウン_0",
+        "label": "確認結果",
+        "noLabel": false,
+        "required": false,
+        "options": {
+          "確認不能": {
+            "label": "確認不能",
+            "index": "2"
+          },
+          "範囲外": {
+            "label": "範囲外",
+            "index": "1"
+          },
+          "範囲内": {
+            "label": "範囲内",
+            "index": "0"
+          }
+        },
+        "defaultValue": ""
+      },
+      "ido": {
+        "type": "SINGLE_LINE_TEXT",
+        "code": "ido",
+        "label": "緯度",
+        "noLabel": false,
+        "required": false,
+        "minLength": "",
+        "maxLength": "",
+        "expression": "",
+        "hideExpression": false,
+        "unique": false,
+        "defaultValue": ""
+      },
+      "数値": {
+        "type": "NUMBER",
+        "code": "数値",
+        "label": "土地面積",
+        "noLabel": false,
+        "required": false,
+        "minValue": "",
+        "maxValue": "",
+        "digit": false,
+        "unique": false,
+        "defaultValue": "",
+        "displayScale": "",
+        "unit": "m2",
+        "unitPosition": "AFTER"
+      },
+      "作成日時": {
+        "type": "CREATED_TIME",
+        "code": "作成日時",
+        "label": "作成日時",
+        "noLabel": false
+      }
+    }
+  },
+  "app/settings.json": {
+    "name": "埋文相談台帳",
+    "description": "",
+    "icon": {
+      "type": "PRESET",
+      "key": "APP39"
+    },
+    "theme": "WHITE",
+    "titleField": {
+      "selectionMode": "AUTO",
+      "code": "文字列__1行__0"
+    },
+    "enableThumbnails": true,
+    "enableBulkDeletion": false,
+    "enableComments": true,
+    "enableDuplicateRecord": true,
+    "enableInlineRecordEditing": true,
+    "numberPrecision": {
+      "digits": "16",
+      "decimalPlaces": "4",
+      "roundingMode": "HALF_EVEN"
+    },
+    "firstMonthOfFiscalYear": "4",
+    "revision": "65"
+  },
+  "app/status.json": {
+    "enable": true,
+    "states": {
+      "完了": {
+        "name": "完了",
+        "index": "2",
+        "assignee": {
+          "type": "ONE",
+          "entities": []
+        }
+      },
+      "未処理": {
+        "name": "未処理",
+        "index": "0",
+        "assignee": {
+          "type": "ONE",
+          "entities": [
+            {
+              "entity": {
+                "type": "FIELD_ENTITY",
+                "code": "作成者"
+              },
+              "includeSubs": false
+            }
+          ]
+        }
+      },
+      "処理中": {
+        "name": "処理中",
+        "index": "1",
+        "assignee": {
+          "type": "ANY",
+          "entities": [
+            {
+              "entity": {
+                "type": "USER",
+                "code": "t.hatori.0708.1987@gmail.com"
+              },
+              "includeSubs": false
+            }
+          ]
+        }
+      }
+    },
+    "actions": [
+      {
+        "name": "処理開始",
+        "from": "未処理",
+        "to": "処理中",
+        "filterCond": "",
+        "type": "PRIMARY"
+      },
+      {
+        "name": "完了する",
+        "from": "処理中",
+        "to": "完了",
+        "filterCond": "",
+        "type": "PRIMARY"
+      }
+    ],
+    "revision": "65"
+  },
+  "app/notifications/general.json": {
+    "notifications": [
+      {
+        "entity": {
+          "type": "FIELD_ENTITY",
+          "code": "更新者"
+        },
+        "includeSubs": false,
+        "recordAdded": false,
+        "recordEdited": false,
+        "commentAdded": true,
+        "statusChanged": false,
+        "fileImported": false
+      },
+      {
+        "entity": {
+          "type": "FIELD_ENTITY",
+          "code": "作成者"
+        },
+        "includeSubs": false,
+        "recordAdded": false,
+        "recordEdited": false,
+        "commentAdded": true,
+        "statusChanged": false,
+        "fileImported": false
+      },
+      {
+        "entity": {
+          "type": "FIELD_ENTITY",
+          "code": "作業者"
+        },
+        "includeSubs": false,
+        "recordAdded": false,
+        "recordEdited": false,
+        "commentAdded": false,
+        "statusChanged": true,
+        "fileImported": false
+      }
+    ],
+    "notifyToCommenter": true,
+    "revision": "65"
+  },
+  "app/notifications/perRecord.json": {
+    "notifications": [],
+    "revision": "65"
+  },
+  "app/notifications/reminder.json": {
+    "notifications": [],
+    "timezone": null,
+    "revision": "65"
+  },
+  "app/acl.json": {
+    "rights": [
+      {
+        "entity": {
+          "type": "CREATOR",
+          "code": null
+        },
+        "includeSubs": false,
+        "appEditable": true,
+        "recordViewable": true,
+        "recordAddable": true,
+        "recordEditable": true,
+        "recordDeletable": true,
+        "recordImportable": true,
+        "recordExportable": true
+      },
+      {
+        "entity": {
+          "type": "GROUP",
+          "code": "everyone"
+        },
+        "includeSubs": false,
+        "appEditable": false,
+        "recordViewable": true,
+        "recordAddable": true,
+        "recordEditable": true,
+        "recordDeletable": true,
+        "recordImportable": false,
+        "recordExportable": false
+      }
+    ],
+    "revision": "65"
+  },
+  "record/acl.json": {
+    "rights": [],
+    "revision": "65"
+  },
+  "field/acl.json": {
+    "rights": [],
+    "revision": "65"
+  },
+  "form.json": {
+    "properties": [
+      {
+        "type": "RECORD_NUMBER",
+        "label": "レコード番号",
+        "noLabel": "false",
+        "code": "レコード番号"
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "label": "緯度",
+        "noLabel": "false",
+        "code": "ido",
+        "required": "false",
+        "minLength": null,
+        "maxLength": null,
+        "expression": "",
+        "hideExpression": "false",
+        "unique": "false",
+        "defaultValue": ""
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "label": "経度",
+        "noLabel": "false",
+        "code": "keido",
+        "required": "false",
+        "minLength": null,
+        "maxLength": null,
+        "expression": "",
+        "hideExpression": "false",
+        "unique": "false",
+        "defaultValue": ""
+      },
+      {
+        "type": "DATETIME",
+        "label": "相談日時",
+        "noLabel": "false",
+        "code": "日時",
+        "required": "false",
+        "unique": "false",
+        "defaultValue": null,
+        "defaultExpression": "NOW"
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "label": "相談所在地",
+        "noLabel": "false",
+        "code": "文字列__1行_",
+        "required": "false",
+        "minLength": null,
+        "maxLength": null,
+        "expression": "",
+        "hideExpression": "false",
+        "unique": "false",
+        "defaultValue": ""
+      },
+      {
+        "type": "DROP_DOWN",
+        "label": "確認結果",
+        "noLabel": "false",
+        "code": "ドロップダウン_0",
+        "required": "false",
+        "options": [
+          "範囲内",
+          "範囲外",
+          "確認不能"
+        ],
+        "defaultValue": null
+      },
+      {
+        "type": "RADIO_BUTTON",
+        "label": "現況",
+        "noLabel": "false",
+        "code": "ラジオボタン",
+        "required": "true",
+        "options": [
+          "戸建て",
+          "共同住宅",
+          "事業所",
+          "駐車場",
+          "更地",
+          "その他"
+        ],
+        "defaultValue": "戸建て"
+      },
+      {
+        "type": "RADIO_BUTTON",
+        "label": "現況",
+        "noLabel": "false",
+        "code": "ラジオボタン_0",
+        "required": "true",
+        "options": [
+          "戸建て（個人用）",
+          "戸建て（分譲）",
+          "共同住宅",
+          "事業所",
+          "その他"
+        ],
+        "defaultValue": "戸建て（個人用）"
+      },
+      {
+        "type": "NUMBER",
+        "label": "土地面積",
+        "noLabel": "false",
+        "code": "数値",
+        "required": "false",
+        "minValue": null,
+        "maxValue": null,
+        "digit": "false",
+        "unique": "false",
+        "defaultValue": null,
+        "displayScale": null,
+        "unit": "m2",
+        "unitPosition": "AFTER"
+      },
+      {
+        "type": "RADIO_BUTTON",
+        "label": "構造",
+        "noLabel": "false",
+        "code": "ラジオボタン_1",
+        "required": "true",
+        "options": [
+          "木造",
+          "鉄骨",
+          "RC",
+          "その他"
+        ],
+        "defaultValue": "木造"
+      },
+      {
+        "type": "NUMBER",
+        "label": "階層",
+        "noLabel": "false",
+        "code": "数値_0",
+        "required": "false",
+        "minValue": null,
+        "maxValue": null,
+        "digit": "false",
+        "unique": "false",
+        "defaultValue": null,
+        "displayScale": null,
+        "unit": "階建",
+        "unitPosition": "AFTER"
+      },
+      {
+        "type": "RADIO_BUTTON",
+        "label": "大規模建築物等",
+        "noLabel": "false",
+        "code": "ラジオボタン_2",
+        "required": "true",
+        "options": [
+          "該当",
+          "非該当"
+        ],
+        "defaultValue": "該当"
+      },
+      {
+        "type": "DROP_DOWN",
+        "label": "ドロップダウン",
+        "noLabel": "false",
+        "code": "ドロップダウン",
+        "required": "false",
+        "options": [
+          "sample1",
+          "sample2"
+        ],
+        "defaultValue": null
+      },
+      {
+        "type": "SINGLE_LINE_TEXT",
+        "label": "相談者",
+        "noLabel": "false",
+        "code": "文字列__1行__0",
+        "required": "false",
+        "minLength": null,
+        "maxLength": null,
+        "expression": "",
+        "hideExpression": "false",
+        "unique": "false",
+        "defaultValue": ""
+      },
+      {
+        "type": "HR"
+      },
+      {
+        "type": "LABEL",
+        "label": "<div>相談情報</div>"
+      },
+      {
+        "type": "SPACER",
+        "elementId": "ponsmap"
+      }
+    ]
+  },
+  "app/actions.json": {
+    "actions": {},
+    "revision": "65"
+  },
+  "app/views.json": {
+    "views": {
+      "（作業者が自分）": {
+        "type": "LIST",
+        "name": "（作業者が自分）",
+        "id": "11128364",
+        "filterCond": "作業者 in (LOGINUSER())",
+        "sort": "レコード番号 desc",
+        "index": "1",
+        "fields": [
+          "レコード番号",
+          "ido",
+          "keido",
+          "日時",
+          "文字列__1行_",
+          "ドロップダウン_0",
+          "ラジオボタン",
+          "ラジオボタン_0",
+          "数値",
+          "ラジオボタン_1",
+          "数値_0",
+          "ラジオボタン_2",
+          "ドロップダウン",
+          "文字列__1行__0",
+          "ステータス",
+          "作業者"
+        ],
+        "builtinType": "ASSIGNEE"
+      },
+      "一覧1": {
+        "type": "LIST",
+        "name": "一覧1",
+        "id": "11128354",
+        "filterCond": "ラジオボタン in (\"戸建て\", \"事業所\")",
+        "sort": "レコード番号 asc, 日時 desc",
+        "index": "0",
+        "fields": [
+          "レコード番号",
+          "更新日時",
+          "ido",
+          "keido"
+        ]
+      }
+    },
+    "revision": "65"
+  },
+  "app/reports.json": {
+    "reports": {},
+    "revision": "65"
+  }
+}
