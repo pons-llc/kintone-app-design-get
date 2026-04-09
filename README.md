@@ -1,0 +1,1 @@
+# kintone-app-design-get
