@@ -1,0 +1,28 @@
+{
+    "manifest_version": 1,
+    "version": "5.0.0",
+    "type": "APP",
+    "name": {
+        "ja": "設計保存プラグイン",
+        "en": "save app-design"
+    },
+    "description": {
+        "ja": "設計情報を保存します。",
+        "en": "This plugin make map on kintoneUI"
+    },
+    "icon": "image/icon2.png",
+    "homepage_url": {
+        "ja": "https://sites.google.com/pons-llc.com/kintone"
+    },
+    "desktop": {
+        "js": [
+            "js/desktop.js"
+        ]
+    },
+    "config": {
+        "html": "html/config.html",
+        "js": [
+            "js/config.js"
+        ]
+    }
+}
